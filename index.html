@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leyendas que no ensucian</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Braah+One&family=Afacad:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="contenedor-movil">
+
+    <!-- FRAME 1 -->
+    <section id="frame1" class="screen active">
+      <button type="button" onclick="iniciarExperiencia()" class="btn-comenzar">COMENZAR</button>
+    </section>
+
+    <!-- BRUJAS -->
+    <section id="frame4" class="screen pantalla-poster">
+      <h1 class="titulo-principal">EXPLORA LA <br> LEYENDA</h1>
+      <p class="subtitulo">Dale Clic en la imagen</p>
+
+      <div class="contenedor-imagen" onclick="cambiarPantalla('frame5')">
+        <img src="assets/images/bruja.png" alt="Bruja de Guápulo">
+      </div>
+
+      <h2 class="titulo-leyenda">“Las Brujas de<br> Guápulo”</h2>
+      <audio id="audioFondo" src="assets/audio/bruja_inicio.mp3"></audio>
+    </section>
+
+    <section id="frame5" class="screen no-padding">
+      <div class="video-container-bg">
+        <video id="videoLeyendaLoop" autoplay loop muted playsinline class="video-background">
+          <source src="assets/videos/bruja_contenido.mp4" type="video/mp4">
+          Tu navegador no soporta video.
+        </video>
+      </div>
+
+      <div class="overlay-texto">
+        <h2 class="titulo-leyenda">“Las Brujas de Guápulo”</h2>
+        <p class="texto-historia">
+          En Guápulo, entre la neblina, se contaba que mujeres vestidas de negro realizaban rituales y aquelarres en las quebradas. Conocidas como las brujas de Guápulo, protegían manantiales, cuidaban los árboles y velaban por la salud del bosque, apareciendo y desapareciendo entre la bruma como sombras misteriosas.
+        </p>
+
+        <audio id="audioNarracion" src="assets/audio/bruja_contenido.mp3"></audio>
+
+        <div class="controles-inferiores">
+          <button type="button" onclick="detenerYContinuar('frame6')" class="btn-continuar">CONTINUAR</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="frame6" class="screen pantalla-reflexion">
+      <h1 class="titulo-secundario">EXPLORA LA <br>LEYENDA</h1>
+
+      <div class="bloque-concientizacion">
+        <p class="texto-reflexion">Guápulo sigue siendo un lugar de magia, pero solo perdura si lo respetamos.</p>
+        <p class="texto-reflexion">Mantener limpios sus caminos es continuar la labor silenciosa de quienes alguna vez lo guardaron.</p>
+      </div>
+
+      <audio id="audioReflexion" src="assets/audio/bruja_reflexion.mp3"></audio>
+      <button type="button" onclick="detenerReflexionYGaleria('frame7')" class="btn-ver-mas">VER MÁS LEYENDAS</button>
+    </section>
+
+    <!-- GALERÍA -->
+    <section id="frame7" class="screen pantalla-blanca">
+      <div class="header-galeria">
+        <h1 class="titulo-galeria">LEYENDAS QUE NO ENSUCIAN</h1>
+        <div class="contenedor-scan">
+          <button id="btnScan" class="btn-scan">ESCANEAR CÓDIGO QR</button>
+        </div>
+      </div>
+
+      <!-- SOLO UNO (ID ÚNICO) -->
+      <div id="reader"></div>
+
+      <div class="zona-posters-morada">
+        <div class="vineta-posters">
+          <span>PÓSTERS</span>
+        </div>
+
+        <div class="grid-posters">
+          <div class="card-poster" onclick="cambiarPantalla('frame4')">
+            <img src="assets/images/poster1.png" alt="Brujas">
+            <div class="contenedor-nombre-blanco">
+              <span>Las Brujas <br>de Guápulo</span>
+            </div>
+          </div>
+
+          <div class="card-poster" onclick="cambiarPantalla('frame10')">
+            <img src="assets/images/poster2.png" alt="Virgen">
+            <div class="contenedor-nombre-blanco">
+              <span>La Virgen de <br>Guápulo</span>
+            </div>
+          </div>
+
+          <div class="card-poster" onclick="cambiarPantalla('frame13')">
+            <img src="assets/images/poster3.png" alt="Caja Ronca">
+            <div class="contenedor-nombre-blanco">
+              <span>La Caja <br>Ronca</span>
+            </div>
+          </div>
+
+          <div class="card-poster" onclick="cambiarPantalla('frame16')">
+            <img src="assets/images/poster4.png" alt="Laguna">
+            <div class="contenedor-nombre-blanco">
+              <span>La Laguna <br>Encantada</span>
+            </div>
+          </div>
+
+          <div class="card-poster" onclick="cambiarPantalla('frame19')">
+            <img src="assets/images/poster5.png" alt="Viuda">
+            <div class="contenedor-nombre-blanco">
+              <span>La Viuda de <br>Piedra Grande</span>
+            </div>
+          </div>
+
+          <div class="card-poster" onclick="cambiarPantalla('frame22')">
+            <img src="assets/images/poster6.png" alt="Duende">
+            <div class="contenedor-nombre-blanco">
+              <span>El Duende de <br>Guápulo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIRGEN -->
+    <section id="frame10" class="screen pantalla-poster" style="background-color: #FFE4B0;">
+      <h1 class="titulo-principal" style="color: #8B4513;">EXPLORA LA <br>LEYENDA</h1>
+      <p class="subtitulo" style="color: #8B4513;">Dale Clic en la imagen</p>
+
+      <div class="contenedor-imagen" onclick="cambiarPantalla('frame11')" style="border-color: white;">
+        <img src="assets/images/virgen.png" alt="Virgen">
+      </div>
+
+      <h2 class="titulo-leyenda" style="color: #8B4513;">“La Virgen de <br>Guápulo”</h2>
+      <audio id="audioVirgenInicio" src="assets/audio/virgen_inicio.mp3"></audio>
+    </section>
+
+    <section id="frame11" class="screen no-padding" style="background-color:#FFE4B0;">
+      <div class="video-container-bg">
+        <video id="videoVirgenLoop" autoplay loop muted playsinline class="video-background">
+          <source src="assets/videos/virgen_contenido.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="overlay-texto" style="background-color: #FFE4B0;">
+        <h2 class="titulo-leyenda" style="color: #8B4513;">“La Virgen de Guápulo”</h2>
+        <p class="texto-historia" style="color: #5D4037;">
+          La Virgen de Guápulo es considerada la guardiana del valle. Se dice que su presencia trae paz y protección a quienes cuidan la naturaleza y respetan los antiguos manantiales que rodean su santuario.
+        </p>
+        <audio id="audioVirgenContenido" src="assets/audio/virgen_contenido.mp3"></audio>
+        <button type="button" onclick="detenerYContinuar('frame12')" class="btn-continuar" style="color: #8B4513;">CONTINUAR</button>
+      </div>
+    </section>
+
+    <section id="frame12" class="screen pantalla-reflexion" style="background-color: #FFE4B0;">
+      <h1 class="titulo-secundario" style="color: #8B4513;">EXPLORA LA <br>LEYENDA</h1>
+
+      <div class="contenedor-reflexion-vertical">
+        <p class="texto-reflexion" style="color: #5D4037;">Honrar a la Virgen de Guápulo es también cuidar el bosque y los manantiales que ella protegía.</p>
+        <p class="texto-reflexion" style="color: #5D4037;">Cada camino limpio mantiene viva su luz en el valle.</p>
+      </div>
+
+      <audio id="audioVirgenReflexion" src="assets/audio/virgen_reflexion.mp3"></audio>
+      <button type="button" onclick="cambiarPantalla('frame7')" class="btn-ver-mas" style="color: #8B4513;">VER MÁS LEYENDAS</button>
+    </section>
+
+    <!-- CAJA RONCA -->
+    <section id="frame13" class="screen pantalla-poster" style="background-color: #B8E6FF;">
+      <h1 class="titulo-principal" style="color: #2D2D5E;">EXPLORA LA <br>LEYENDA</h1>
+      <p class="subtitulo" style="color: #2D2D5E;">Dale Clic en la imagen</p>
+
+      <div class="contenedor-imagen" onclick="cambiarPantalla('frame14')" style="border-color: white;">
+        <img src="assets/images/caja.png" alt="La Caja Ronca">
+      </div>
+
+      <h2 class="titulo-leyenda" style="color: #2D2D5E;">“La Caja Ronca”</h2>
+      <audio id="audioCajaInicio" src="assets/audio/caja_inicio.mp3"></audio>
+    </section>
+
+    <section id="frame14" class="screen no-padding" style="background-color: #B8E6FF;">
+      <div class="video-container-bg">
+        <video id="videoCajaLoop" autoplay loop muted playsinline class="video-background">
+          <source src="assets/videos/caja_contenido.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="overlay-texto" style="background-color: #B8E6FF;">
+        <h2 class="titulo-leyenda" style="color: #2D2D5E;">“La Caja Ronca”</h2>
+        <p class="texto-historia" style="color: #2D2D5E;">
+          Cuentan los antiguos que, en las noches más silenciosas, bajaba por el cementerio una carroza oscura que llevaba un difunto. La acompañaban figuras vestidas de negro que caminaban sin prisa, casi flotando, y que no dejaban oír más que el sonido hueco de la caja.
+        </p>
+        <audio id="audioCajaContenido" src="assets/audio/caja_contenido.mp3"></audio>
+        <button type="button" onclick="cambiarPantalla('frame15')" class="btn-continuar" style="color: #2D2D5E;">CONTINUAR</button>
+      </div>
+    </section>
+
+    <section id="frame15" class="screen pantalla-reflexion" style="background-color: #B8E6FF;">
+      <h1 class="titulo-secundario" style="color: #2D2D5E;">EXPLORA LA<br> LEYENDA</h1>
+
+      <div class="contenedor-reflexion-vertical">
+        <p class="texto-reflexion" style="color: #2D2D5E;">
+          Hoy nos toca a nosotros respetar esos espacios y cuidar los lugares que guardan la memoria de Guápulo.
+        </p>
+        <p class="texto-reflexion" style="color: #2D2D5E;">
+          Cada acto de cuidado mantiene vivo el silencio que la Caja Ronca protegía.
+        </p>
+      </div>
+
+      <audio id="audioCajaReflexion" src="assets/audio/caja_reflexion.mp3"></audio>
+      <button type="button" onclick="cambiarPantalla('frame7')" class="btn-ver-mas" style="color: #2D2D5E;">VER MÁS LEYENDAS</button>
+    </section>
+
+    <!-- LAGUNA -->
+    <section id="frame16" class="screen pantalla-poster" style="background-color: #FCE4FF;">
+      <h1 class="titulo-principal" style="color: #701070;">EXPLORA LA <br>LEYENDA</h1>
+      <p class="subtitulo" style="color: #701070;">Dale Clic en la imagen</p>
+
+      <div class="contenedor-imagen" onclick="cambiarPantalla('frame17')" style="border-color: #701070;">
+        <img src="assets/images/poster4.png" alt="La Laguna Encantada">
+      </div>
+
+      <h2 class="titulo-leyenda" style="color: #701070;">“La Laguna Encantada <br>de Guápulo”</h2>
+      <audio id="audioLagunaInicio" src="assets/audio/laguna_inicio.mp3"></audio>
+    </section>
+
+    <section id="frame17" class="screen no-padding" style="background-color: #FCE4FF;">
+      <div class="video-container-bg">
+        <video id="videoLagunaLoop" autoplay loop muted playsinline class="video-background">
+          <source src="assets/videos/laguna_contenido.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="overlay-texto" style="background-color: #FCE4FF;">
+        <h2 class="titulo-leyenda" style="color: #701070;">“La Laguna Encantada de Guápulo”</h2>
+        <p class="texto-historia" style="color: #4A084A;">
+          Se cuenta que, hace siglos, en el valle de Guápulo existía una pequeña laguna envuelta en bruma, donde aparecía una mujer vestida de blanco que atraía a quienes se acercaban demasiado y luego desaparecía entre las aguas.
+        </p>
+        <audio id="audioLagunaContenido" src="assets/audio/laguna_contenido.mp3"></audio>
+        <button type="button" onclick="cambiarPantalla('frame18')" class="btn-continuar" style="color: #701070;">CONTINUAR</button>
+      </div>
+    </section>
+
+    <section id="frame18" class="screen pantalla-reflexion" style="background-color: #FCE4FF;">
+      <h1 class="titulo-secundario" style="color: #701070;">EXPLORA LA <br>LEYENDA</h1>
+
+      <div class="contenedor-reflexion-vertical">
+        <p class="texto-reflexion" style="color: #4A084A;">La Laguna tenía su guardiana; hoy, su protección depende de nosotros.</p>
+        <p class="texto-reflexion" style="color: #4A084A;">Cuidar el bosque es mantener viva la magia de Guápulo.</p>
+      </div>
+
+      <audio id="audioLagunaReflexion" src="assets/audio/laguna_reflexion.mp3"></audio>
+      <button type="button" onclick="cambiarPantalla('frame7')" class="btn-ver-mas" style="color: #701070;">VER MÁS LEYENDAS</button>
+    </section>
+
+    <!-- VIUDA -->
+    <section id="frame19" class="screen pantalla-poster" style="background-color: #E2DFFF;">
+      <h1 class="titulo-principal" style="color: #4B0082;">EXPLORA LA <br>LEYENDA</h1>
+      <p class="subtitulo" style="color: #4B0082;">Dale Clic en la imagen</p>
+
+      <div class="contenedor-imagen" onclick="cambiarPantalla('frame20')" style="border-color: #4B0082;">
+        <img src="assets/images/poster5.png" alt="La Viuda de Piedra Grande">
+      </div>
+
+      <h2 class="titulo-leyenda" style="color: #4B0082;">“La Viuda de<br> Piedra Grande”</h2>
+      <audio id="audioViudaInicio" src="assets/audio/viuda_inicio.mp3"></audio>
+    </section>
+
+    <section id="frame20" class="screen no-padding" style="background-color: #E2DFFF;">
+      <div class="video-container-bg">
+        <video id="videoViudaLoop" autoplay loop muted playsinline class="video-background">
+          <source src="assets/videos/viuda_contenido.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="overlay-texto" style="background-color: #E2DFFF;">
+        <h2 class="titulo-leyenda" style="color: #4B0082;">“La Viuda de Piedra<br> Grande”</h2>
+        <p class="texto-historia" style="color: #2E0854;">
+          Era una mujer misteriosa que aparecía de noche para vigilar las quebradas y caminos del barrio. Seducía y castigaba a los hombres con malas intenciones, recordando la importancia de respetar tanto a las personas como los espacios sagrados del entorno.
+        </p>
+        <audio id="audioViudaContenido" src="assets/audio/viuda_contenido.mp3"></audio>
+        <button type="button" onclick="cambiarPantalla('frame21')" class="btn-continuar" style="color: #4B0082;">CONTINUAR</button>
+      </div>
+    </section>
+
+    <section id="frame21" class="screen pantalla-reflexion" style="background-color: #E2DFFF;">
+      <h1 class="titulo-secundario" style="color: #4B0082;">EXPLORA LA <br>LEYENDA</h1>
+
+      <div class="contenedor-reflexion-vertical">
+        <p class="texto-reflexion" style="color: #2E0854;">La Viuda vigilaba las quebradas para que nadie dañara lo que protegía.</p>
+        <p class="texto-reflexion" style="color: #2E0854;">Hoy, somos nosotros quienes debemos cuidar esos caminos y mantener viva la esencia de Guápulo.</p>
+      </div>
+
+      <audio id="audioViudaReflexion" src="assets/audio/viuda_reflexion.mp3"></audio>
+      <button type="button" onclick="cambiarPantalla('frame7')" class="btn-ver-mas" style="color: #4B0082;">VER MÁS LEYENDAS</button>
+    </section>
+
+    <!-- DUENDE -->
+    <section id="frame22" class="screen pantalla-poster" style="background-color: #FFE4B0;">
+      <h1 class="titulo-principal" style="color: #8B4513;">EXPLORA LA <br>LEYENDA</h1>
+      <p class="subtitulo" style="color: #8B4513;">Dale Clic en la imagen</p>
+
+      <div class="contenedor-imagen" onclick="cambiarPantalla('frame23')" style="border-color: #8B4513;">
+        <img src="assets/images/poster6.png" alt="El Duende de Guápulo">
+      </div>
+
+      <h2 class="titulo-leyenda" style="color: #8B4513;">“El Duende de <br>Guápulo”</h2>
+      <audio id="audioDuendeInicio" src="assets/audio/duende_inicio.mp3"></audio>
+    </section>
+
+    <section id="frame23" class="screen no-padding" style="background-color: #FFE4B0;">
+      <div class="video-container-bg">
+        <video id="videoDuendeLoop" autoplay loop muted playsinline class="video-background">
+          <source src="assets/videos/duende_contenido.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="overlay-texto" style="background-color: #FFE4B0;">
+        <h2 class="titulo-leyenda" style="color: #8B4513;">“El Duende de Guápulo”</h2>
+        <p class="texto-historia" style="color: #5D4037;">
+          Iñaki, un pequeño duende del barrio, aparecía por las noches para proteger las cosas antiguas, escaleras y rincones del vecindario. Aunque travieso, su objetivo era recordar a los vecinos la importancia de cuidar y respetar el entorno.
+        </p>
+        <audio id="audioDuendeContenido" src="assets/audio/duende_contenido.mp3"></audio>
+        <button type="button" onclick="cambiarPantalla('frame24')" class="btn-continuar" style="color: #8B4513;">CONTINUAR</button>
+      </div>
+    </section>
+
+    <section id="frame24" class="screen pantalla-reflexion" style="background-color: #FFE4B0;">
+      <h1 class="titulo-secundario" style="color: #8B4513;">EXPLORA LA <br>LEYENDA</h1>
+
+      <div class="contenedor-reflexion-vertical reflexion-compacta">
+        <p class="texto-reflexion" style="color: #5D4037;">
+          El Duende protegía estos pasajes a su manera; hoy es nuestro turno de mantenerlos limpios.
+        </p>
+        <p class="texto-reflexion" style="color: #5D4037;">
+          No conviertas sus rincones en basureros, Guápulo es espacio público, no depósito.
+        </p>
+      </div>
+
+      <audio id="audioDuendeReflexion" src="assets/audio/duende_reflexion.mp3"></audio>
+      <button type="button" onclick="cambiarPantalla('frame7')" class="btn-ver-mas" style="color: #8B4513;">VER MÁS LEYENDAS</button>
+    </section>
+
+  </div>
+
+  <script src="https://unpkg.com/html5-qrcode"></script>
+  <script>
+    // ===== QR Scanner global =====
+    let qrScanner = null;
+    let qrStopping = false;
+
+    // ✅ Aquí guardamos a qué frame debe ir COMENZAR
+    let destinoPendiente = null;
+
+    // ✅ Mapa: palabra -> frame (tu “primera pantalla” de cada leyenda)
+    const rutas = {
+      bruja:  "frame4",
+      virgen: "frame10",
+      caja:   "frame13",
+      laguna: "frame16",
+      viuda:  "frame19",
+      duende: "frame22"
+    };
+
+    // ===============================
+    // UTILIDADES
+    // ===============================
+    function detenerEscaneo() {
+      const readerDiv = document.getElementById("reader");
+      if (readerDiv) readerDiv.style.display = "none";
+
+      if (!qrScanner || qrStopping) return;
+
+      qrStopping = true;
+      qrScanner.stop()
+        .catch(() => {})
+        .finally(() => {
+          try { qrScanner.clear(); } catch (e) {}
+          qrScanner = null;
+          qrStopping = false;
+        });
+    }
+
+    // 1) Detener audios, videos y QR
+    function detenerTodoMultimedia() {
+      detenerEscaneo();
+
+      document.querySelectorAll("audio").forEach(a => {
+        a.pause();
+        a.currentTime = 0;
+      });
+
+      document.querySelectorAll("video").forEach(v => {
+        v.pause();
+        try { v.currentTime = 0; } catch(e) {}
+      });
+    }
+
+    // ✅ Lee si la URL trae #bruja, #duende, etc.
+    function obtenerLeyendaDesdeURL() {
+      const hash = (window.location.hash || "")
+        .replace("#", "")
+        .toLowerCase()
+        .trim();
+
+      return rutas[hash] ? hash : null;
+    }
+
+    // ✅ Detecta qué leyenda contiene el QR (sirve si el QR es "bruja" o una URL con #bruja)
+    function detectarLeyendaEnTexto(qrText) {
+      const t = (qrText || "").toLowerCase();
+
+      // si es URL con hash: .../#bruja
+      const matchHash = t.match(/#(bruja|virgen|caja|laguna|viuda|duende)\b/);
+      if (matchHash && matchHash[1]) return matchHash[1];
+
+      // si es texto simple: "bruja", "duende", etc.
+      for (const key of Object.keys(rutas)) {
+        if (t.includes(key)) return key;
+      }
+      return null;
+    }
+
+    // ===============================
+    // NAVEGACIÓN DE PANTALLAS
+    // ===============================
+    function cambiarPantalla(idDestino) {
+      detenerTodoMultimedia();
+
+      document.querySelectorAll(".screen").forEach(p => p.classList.remove("active"));
+
+      const destino = document.getElementById(idDestino);
+      if (!destino) {
+        console.error("Error: El frame '" + idDestino + "' no existe.");
+        return;
+      }
+
+      destino.classList.add("active");
+
+      // ===== Disparadores de audio/video por frame =====
+
+      // Brujas
+      if (idDestino === "frame4") {
+        const a = document.getElementById("audioFondo");
+        if (a) a.play().catch(() => {});
+      }
+      if (idDestino === "frame5") {
+        const a = document.getElementById("audioNarracion");
+        const v = document.getElementById("videoLeyendaLoop");
+        if (a) a.play().catch(() => {});
+        if (v) { v.load(); v.play().catch(() => {}); }
+      }
+      if (idDestino === "frame6") {
+        const a = document.getElementById("audioReflexion");
+        if (a) a.play().catch(() => {});
+      }
+
+      // Virgen
+      if (idDestino === "frame10") {
+        const a = document.getElementById("audioVirgenInicio");
+        if (a) a.play().catch(() => {});
+      }
+      if (idDestino === "frame11") {
+        const a = document.getElementById("audioVirgenContenido");
+        const v = document.getElementById("videoVirgenLoop");
+        if (a) a.play().catch(() => {});
+        if (v) { v.load(); v.play().catch(() => {}); }
+      }
+      if (idDestino === "frame12") {
+        const a = document.getElementById("audioVirgenReflexion");
+        if (a) a.play().catch(() => {});
+      }
+
+      // Caja Ronca
+      if (idDestino === "frame13") {
+        const a = document.getElementById("audioCajaInicio");
+        if (a) a.play().catch(() => {});
+      }
+      if (idDestino === "frame14") {
+        const a = document.getElementById("audioCajaContenido");
+        const v = document.getElementById("videoCajaLoop");
+        if (a) a.play().catch(() => {});
+        if (v) { v.load(); v.play().catch(() => {}); }
+      }
+      if (idDestino === "frame15") {
+        const a = document.getElementById("audioCajaReflexion");
+        if (a) a.play().catch(() => {});
+      }
+
+      // Laguna
+      if (idDestino === "frame16") {
+        const a = document.getElementById("audioLagunaInicio");
+        if (a) a.play().catch(() => {});
+      }
+      if (idDestino === "frame17") {
+        const a = document.getElementById("audioLagunaContenido");
+        const v = document.getElementById("videoLagunaLoop");
+        if (a) a.play().catch(() => {});
+        if (v) { v.load(); v.play().catch(() => {}); }
+      }
+      if (idDestino === "frame18") {
+        const a = document.getElementById("audioLagunaReflexion");
+        if (a) a.play().catch(() => {});
+      }
+
+      // Viuda
+      if (idDestino === "frame19") {
+        const a = document.getElementById("audioViudaInicio");
+        if (a) a.play().catch(() => {});
+      }
+      if (idDestino === "frame20") {
+        const a = document.getElementById("audioViudaContenido");
+        const v = document.getElementById("videoViudaLoop");
+        if (a) a.play().catch(() => {});
+        if (v) { v.load(); v.play().catch(() => {}); }
+      }
+      if (idDestino === "frame21") {
+        const a = document.getElementById("audioViudaReflexion");
+        if (a) a.play().catch(() => {});
+      }
+
+      // Duende
+      if (idDestino === "frame22") {
+        const a = document.getElementById("audioDuendeInicio");
+        if (a) a.play().catch(() => {});
+      }
+      if (idDestino === "frame23") {
+        const a = document.getElementById("audioDuendeContenido");
+        const v = document.getElementById("videoDuendeLoop");
+        if (a) a.play().catch(() => {});
+        if (v) { v.load(); v.play().catch(() => {}); }
+      }
+      if (idDestino === "frame24") {
+        const a = document.getElementById("audioDuendeReflexion");
+        if (a) a.play().catch(() => {});
+      }
+    }
+
+    // ✅ Botón COMENZAR:
+    // Si hay destinoPendiente (viene de link/QR) va ahí;
+    // si no hay, va a tu default (bruja)
+    function iniciarExperiencia() {
+      const destino = destinoPendiente || "frame4";
+      destinoPendiente = null; // ya se usó
+      cambiarPantalla(destino);
+    }
+
+    // 4) Botones (helpers)
+    function detenerYContinuar(sig) { cambiarPantalla(sig); }
+    function detenerReflexionYGaleria(sig) { cambiarPantalla(sig); }
+
+    // ===============================
+    // QR
+    // ===============================
+    function iniciarEscaneo() {
+      const readerDiv = document.getElementById("reader");
+      if (!readerDiv) return;
+
+      readerDiv.style.display = "block";
+      if (qrScanner) return; // no recrear
+
+      qrScanner = new Html5Qrcode("reader");
+      const config = { fps: 10, qrbox: { width: 250, height: 250 } };
+
+      qrScanner.start(
+        { facingMode: "environment" },
+        config,
+        (qrText) => {
+          const leyenda = detectarLeyendaEnTexto(qrText);
+          if (leyenda && rutas[leyenda]) {
+            // ✅ Guardamos el destino y mostramos portada (espera que presionen COMENZAR)
+            destinoPendiente = rutas[leyenda];
+            cambiarPantalla("frame1");
+          }
+          detenerEscaneo();
+        }
+      ).catch(err => {
+        console.error("Error al iniciar cámara:", err);
+        detenerEscaneo();
+      });
+    }
+
+    // ===============================
+    // INICIO: siempre portada, pero si viene con # guarda destino
+    // (NO auto-salto)
+    // ===============================
+    document.addEventListener("DOMContentLoaded", () => {
+      // Enlazar botón scan
+      const btnScan = document.getElementById("btnScan");
+      if (btnScan) btnScan.addEventListener("click", iniciarEscaneo);
+
+      // Leer hash y guardar destino si existe
+      const leyenda = obtenerLeyendaDesdeURL();
+      destinoPendiente = leyenda ? rutas[leyenda] : null;
+
+      // Siempre mostrar portada
+      cambiarPantalla("frame1");
+    });
+
+    // Si cambian el hash con la página abierta
+    window.addEventListener("hashchange", () => {
+      const leyenda = obtenerLeyendaDesdeURL();
+      destinoPendiente = leyenda ? rutas[leyenda] : null;
+      cambiarPantalla("frame1");
+    });
+  </script>
+
+
+
+
+</body>
+</html>
