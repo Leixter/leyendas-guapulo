@@ -197,7 +197,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 60%;
+  height: 70%;
   overflow: hidden;
   z-index: 1;
 }
@@ -597,6 +597,19 @@ img {
     font-size: 0.95rem !important;
     margin-top: 8px !important;
   }
+}
+
+.overlay-compacto {
+  min-height: auto !important; /* Elimina la altura mínima del 45% */
+  height: auto !important;     /* Deja que el contenido defina la altura */
+  padding-top: 20px !important;    /* Menos espacio arriba */
+  padding-bottom: 20px !important; /* Menos espacio abajo */
+  bottom: 0;
+}
+
+/* Ajuste fino para el título dentro del recuadro compacto */
+.overlay-compacto .titulo-leyenda {
+  margin-bottom: 10px !important;
 }
 
 /* ===== CLAVE: SOLO la pantalla .active se muestra ===== */
