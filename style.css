@@ -117,6 +117,7 @@ body {
 }
 
 .titulo-leyenda {
+  padding: 18px;
   margin-top: 10px;
   text-align: center;
   font-family: 'Amarante', serif;
@@ -214,9 +215,9 @@ img {
   left: 0;
   width: 100%;
   border-radius: 34px 34px 0 0;
-  padding: 15px 15px;
+  padding: 0px 0px;
   box-sizing: border-box;
-  min-height: 45%;
+  min-height: 35%;
   box-shadow: 0 -10px 30px rgba(0,0,0,0.1);
   background-color: #E0DFFE;
 
@@ -450,19 +451,19 @@ img {
 
 .overlay-texto .titulo-leyenda{
   margin-top: 0 !important;
-  margin-bottom: 10px !important; /* antes se veía muy separado */
+  margin-bottom: 15px !important; 
 }
 
 /* Pega más el texto al título */
 .overlay-texto .texto-historia{
-  margin-top: 15px !important;
+  margin-top: 0px !important;
   margin-bottom: 16px !important;
   line-height: 1.15 !important;   /* un poco más compacto */
 }
 
 /* Dale espacio al botón (CONTINUAR) para que no quede pegado */
 .overlay-texto .btn-continuar{
-  margin-top: 13px !important;
+  margin-top: 15px !important;
 }
 
 /* Si tu botón está dentro de .controles-inferiores, asegúralo centrado y con aire abajo */
@@ -578,41 +579,40 @@ img {
     margin: 18px auto 0 auto !important;
   }
 
-  /* ===== HISTORIA (overlay sobre video) ===== */
+  /* HISTORIA */
   .texto-historia{
     max-width: 92% !important;
-    font-size: 1.2rem !important;      /* 👈 baja letra historia */
+    font-size: 1.2rem !important;      
     line-height: 1.15 !important;
-    margin: 10px auto 12px auto !important;
+    margin: 10px  12px  !important;
     text-align: center !important;
   }
 
   .overlay-texto .titulo-leyenda{
-    font-size: 1.35rem !important;   /* 👈 baja título dentro overlay */
+    font-size: 1.35rem !important;   
     margin: 0 0 10px 0 !important;
   }
 
   .overlay-texto .btn-continuar{
-    padding: 9px 22px !important;
+    padding: 5px 22px !important;
     font-size: 0.95rem !important;
     margin-top: 8px !important;
   }
 }
 
 .overlay-compacto {
-  min-height: auto !important; /* Elimina la altura mínima del 45% */
-  height: auto !important;     /* Deja que el contenido defina la altura */
-  padding-top: 20px !important;    /* Menos espacio arriba */
-  padding-bottom: 20px !important; /* Menos espacio abajo */
+  min-height: auto !important; 
+  height: auto !important;     
+  padding-top: 20px !important;   
+  padding-bottom: 20px !important; 
   bottom: 0;
 }
 
-/* Ajuste fino para el título dentro del recuadro compacto */
+
 .overlay-compacto .titulo-leyenda {
   margin-bottom: 10px !important;
 }
 
-/* ===== CLAVE: SOLO la pantalla .active se muestra ===== */
 .screen { 
   display: none !important; 
 }
