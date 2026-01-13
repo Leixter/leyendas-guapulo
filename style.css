@@ -609,7 +609,7 @@ img {
   }
 
   .overlay-texto {
-    min-height: auto !important; /* <--- QUITAMOS el 45% que lo hacía gigante */
+    min-height: 45% !important; /* <--- QUITAMOS el 45% que lo hacía gigante */
     height: auto !important;     /* El cuadro ahora solo mide lo que mide el texto */
     max-height: 48% !important;  /* Límite máximo para que no tape el video */
     padding: 20px 20px 35px 20px !important; /* Aire abajo para el botón */
