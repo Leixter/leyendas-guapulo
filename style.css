@@ -600,29 +600,27 @@ img {
 
   /* HISTORIA */
   .texto-historia{
- 
-    
-    padding: 20px 20px 35px 20px !important;
-    border-radius: 40px 40px 0 0 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: flex-start !important;
+    font-size: 1.1rem !important;
+    line-height: 1.1 !important;
+    margin: 5px 0 !important;
+    display: block !important; /* Quitamos el flex que le pusiste al párrafo */
+    max-width: 95% !important;
   }
 
   .overlay-texto {
-    min-height: 45% !important; /* <--- QUITAMOS el 45% que lo hacía gigante */
-    height: auto !important;     /* El cuadro ahora solo mide lo que mide el texto */
-    max-height: 48% !important;  /* Límite máximo para que no tape el video */
-    padding: 15px 20px !important; 
+    min-height: 40% !important; /* <--- QUITAMOS el 45% que lo hacía gigante */
+    height: 40%!important;     /* El cuadro ahora solo mide lo que mide el texto */
+    padding: 15px 20px !important;
     border-radius: 35px 35px 0 0 !important;
     display: flex !important;
     flex-direction: column !important;
-    justify-content: space-between !important; /* Separa título, texto y botón automáticamente */
+    justify-content: space-between !important; /* <--- Separa título, texto y botón */
     align-items: center !important;
+    background-color: #E0DFFE !important;
   }
 
   .btn-continuar{
-    margin: 0 !important;
+    margin-top: auto !important;
     padding: 10px 35px !important;
     flex-shrink: 0;
   }
