@@ -217,7 +217,7 @@ img {
   border-radius: 34px 34px 0 0;
   padding: 15px 20px 25px 20px !important;
   box-sizing: border-box;
-  min-height: 30%;
+  min-height: 35%;
   box-shadow: 0 -10px 30px rgba(0,0,0,0.1);
   background-color: #E0DFFE;
 
@@ -600,16 +600,16 @@ img {
 
   /* HISTORIA */
   .texto-historia {
-    min-height: auto !important; /* <--- ELIMINAMOS el 32% o 50% */
-    height: auto !important; 
-    padding: 15px 20px 20px 20px !important; /* Menos espacio interno */
-    border-radius: 40px 40px 0 0 !important;
-    justify-content: flex-start !important;
-    bottom: 0 !important
+    font-size: 1.15rem !important;
+    line-height: 1.1 !important; /* Interlineado compacto para que quepa */
+    margin: 5px 0 !important;
+    display: block !important; 
+    text-align: center !important;
+    max-width: 100% !important;
   }
 
   .overlay-texto {
-    min-height: 32% !important; /* Altura mínima elegante */
+    min-height: 38% !important; /* Altura mínima elegante */
     height: auto !important;     /* Crece si el texto es largo */
     padding-bottom: 30px !important;
     justify-content: flex-start !important;
