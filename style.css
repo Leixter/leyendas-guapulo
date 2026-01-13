@@ -198,7 +198,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 65%;
   overflow: hidden;
   z-index: 1;
 }
@@ -609,10 +609,12 @@ img {
   }
 
   .overlay-texto {
-    min-height: 38% !important; /* Altura mínima elegante */
-    height: auto !important;     /* Crece si el texto es largo */
-    padding-bottom: 30px !important;
+    min-height: auto !important; /* <--- ELIMINAMOS el 32% o 50% */
+    height: auto !important; 
+    padding: 15px 20px 20px 20px !important; /* Menos espacio interno */
+    border-radius: 40px 40px 0 0 !important;
     justify-content: flex-start !important;
+    bottom: 0 !important;
   }
 
   .btn-continuar {
