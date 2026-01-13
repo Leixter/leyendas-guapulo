@@ -599,34 +599,37 @@ img {
   }
 
   /* HISTORIA */
-  .texto-historia{
-    font-size: 1.1rem !important;
-    line-height: 1.1 !important;
+  .texto-historia {
+    font-size: 1.15rem !important;
+    line-height: 1.1 !important; /* Interlineado compacto para que quepa */
     margin: 5px 0 !important;
-    display: block !important; /* Quitamos el flex que le pusiste al párrafo */
-    max-width: 95% !important;
+    display: block !important; 
+    text-align: center !important;
+    max-width: 100% !important;
   }
 
   .overlay-texto {
-    min-height: 40% !important; /* <--- QUITAMOS el 45% que lo hacía gigante */
-    height: 40%!important;     /* El cuadro ahora solo mide lo que mide el texto */
-    padding: 15px 20px !important;
-    border-radius: 35px 35px 0 0 !important;
+    min-height: 50% !important; /* Aumentamos a 50% para que quepa todo el texto */
+    height: 50% !important;
+    max-height: 50% !important;
+    padding: 20px !important;
+    border-radius: 40px 40px 0 0 !important;
     display: flex !important;
     flex-direction: column !important;
-    justify-content: space-between !important; /* <--- Separa título, texto y botón */
+    justify-content: space-between !important; /* Empuja el botón al fondo */
     align-items: center !important;
-    background-color: #E0DFFE !important;
+    overflow: hidden !important; /* Bloquea el scroll */
   }
 
-  .btn-continuar{
-    margin-top: auto !important;
-    padding: 10px 35px !important;
+  .btn-continuar {
+    margin-top: auto !important; /* Fuerza al botón a irse al fondo del 50% */
+    padding: 12px 40px !important;
     flex-shrink: 0;
   }
   .overlay-texto .titulo-leyenda {
     font-size: 1.4rem !important;
-    margin-bottom: 5px !important;
+    margin: 0 0 5px 0 !important;
+    line-height: 1 !important;
   }
 
   
