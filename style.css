@@ -520,7 +520,7 @@ img {
 /* ===== MOBILE (520px) - limpio y sin conflictos ===== */
 @media (max-width: 520px) {
   .contenedor-imagen {
-    width: 220px;
+    width: 200px;
     height: 350px;
     border-radius: 34px;
     overflow: hidden;
@@ -608,12 +608,14 @@ img {
     justify-content: flex-start !important;
   }
 
-  .overlay-texto{
-    font-size: 1.35rem !important;   
-    margin: 0 0 10px 0 !important;
-    min-height: 42% !important; /* Esto asegura que el cuadro no sea una tirita chiquita */
-    padding: 20px 15px !important;
-    justify-content: center !important; /* Centra el contenido internamente */
+  .overlay-texto {
+    min-height: auto !important; /* <--- QUITAMOS el 45% que lo hacía gigante */
+    height: auto !important;     /* El cuadro ahora solo mide lo que mide el texto */
+    max-height: 48% !important;  /* Límite máximo para que no tape el video */
+    padding: 20px 20px 35px 20px !important; /* Aire abajo para el botón */
+    border-radius: 35px 35px 0 0 !important;
+    justify-content: center !important;
+    bottom: 0 !important;
   }
 
   .overlay-texto .btn-continuar{
