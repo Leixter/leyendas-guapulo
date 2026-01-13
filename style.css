@@ -601,7 +601,9 @@ img {
   /* HISTORIA */
   .texto-historia{
     min-height: 45% !important; /* <--- Esto hace que el recuadro NO sea chiquito */
-    padding: 25px 20px !important; /* <--- Añade espacio interno */
+    max-height: 48% !important; /* <--- Esto hace que el recuadro NO sea chiquito */
+    
+    padding: 20px 20px 35px 20px !important;
     border-radius: 40px 40px 0 0 !important;
     display: flex !important;
     flex-direction: column !important;
@@ -619,7 +621,7 @@ img {
   }
 
   .overlay-texto .btn-continuar{
-    padding: 10px 30px !important;
+    padding: 8px 30px !important;
     margin-top: 10px !important;
     opacity: 1 !important; /* Aseguramos que se vea */
     transform: scale(1) !important;
