@@ -516,11 +516,12 @@ img {
   height: 32px !important;
 }
 
+
 /* ===== MOBILE (520px) - limpio y sin conflictos ===== */
 @media (max-width: 520px) {
   .contenedor-imagen {
     width: 300px;
-    height: 800px;
+    height: 350px;
     border-radius: 34px;
     overflow: hidden;
     border: 4px solid white;
@@ -595,23 +596,32 @@ img {
 
   /* HISTORIA */
   .texto-historia{
-    max-width: 92% !important;
-    font-size: 1.2rem !important;      
-    line-height: 1.15 !important;
-    margin: 10px  12px  !important;
-    text-align: center !important;
+    max-width: 95% !important;
+    font-size: 1.15rem !important; 
+    line-height: 1.2 !important;
+    margin: 10px auto !important;
   }
 
   .overlay-texto{
     font-size: 1.35rem !important;   
     margin: 0 0 10px 0 !important;
+    min-height: 42% !important; /* Esto asegura que el cuadro no sea una tirita chiquita */
+    padding: 20px 15px !important;
+    justify-content: center !important; /* Centra el contenido internamente */
   }
 
   .overlay-texto .btn-continuar{
-    padding: 5px 22px !important;
-    font-size: 0.95rem !important;
-    margin-top: 1px !important;
+    padding: 10px 30px !important;
+    margin-top: 10px !important;
+    opacity: 1 !important; /* Aseguramos que se vea */
+    transform: scale(1) !important;
   }
+  .overlay-texto .titulo-leyenda {
+    font-size: 1.4rem !important;
+    margin-bottom: 5px !important;
+  }
+
+  
 }
 
 .overlay-compacto {
