@@ -132,7 +132,7 @@ body {
   text-align: center;
   color: #4A4A8A;
   margin: 5px auto;
-  max-width: -35%;
+  max-width: 90%;
 }
 
 .texto-reflexion {
@@ -198,7 +198,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 70%;
+  height: 100%;
   overflow: hidden;
   z-index: 1;
 }
@@ -215,7 +215,7 @@ img {
   left: 0;
   width: 100%;
   border-radius: 34px 34px 0 0;
-  padding: 0px 0px;
+  padding: 20px;
   box-sizing: border-box;
   min-height: 35%;
   box-shadow: 0 -10px 30px rgba(0,0,0,0.1);
@@ -609,22 +609,15 @@ img {
   }
 
   .overlay-texto {
-    min-height: 50% !important; /* Aumentamos a 50% para que quepa todo el texto */
-    height: 50% !important;
-    max-height: 50% !important;
-    padding: 20px !important;
-    border-radius: 40px 40px 0 0 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important; /* Empuja el botón al fondo */
-    align-items: center !important;
-    overflow: hidden !important; /* Bloquea el scroll */
+    min-height: 38% !important; /* Altura mínima elegante */
+    height: auto !important;     /* Crece si el texto es largo */
+    padding-bottom: 30px !important;
+    justify-content: flex-start !important;
   }
 
   .btn-continuar {
-    margin-top: auto !important; /* Fuerza al botón a irse al fondo del 50% */
-    padding: 12px 40px !important;
-    flex-shrink: 0;
+    margin-top: auto !important;
+    margin-bottom: 15px !important;
   }
   .overlay-texto .titulo-leyenda {
     font-size: 1.4rem !important;
