@@ -2,259 +2,261 @@
 * { box-sizing: border-box; }
 
 body {
-  margin: 0;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f0f0f0; /* fondo fuera del celular */
-  color: #807DDF;
-  font-family: 'Afacad', sans-serif;
+margin: 0;
+height: 100vh;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #f0f0f0; /* fondo fuera del celular */
+color: #807DDF;
+font-family: 'Afacad', sans-serif;
 }
 
 /* ===== CONTENEDOR MÓVIL ===== */
 .contenedor-movil {
-  width: 402px;
-  height: 874px;
-  background-color: #E0DFFE;
-  border-radius: 34px;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-  border: 8px solid #333;
+width: 402px;
+height: 874px;
+background-color: #E0DFFE;
+border-radius: 34px;
+overflow: hidden;
+position: relative;
+box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+border: 8px solid #333;
 }
 
 /* Notch */
 .contenedor-movil::before {
-  content: "";
-  position: absolute;
-  top: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px;
-  height: 35px;
-  background: #333;
-  border-radius: 20px;
-  z-index: 1000;
-  pointer-events: none;
+content: "";
+position: absolute;
+top: 15px;
+left: 50%;
+transform: translateX(-50%);
+width: 120px;
+height: 35px;
+background: #333;
+border-radius: 20px;
+z-index: 1000;
+pointer-events: none;
 }
 
 /* ===== PANTALLAS ===== */
 .screen {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  display: none;                 /* CLAVE: por defecto oculto */
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+position: absolute;
+inset: 0;
+width: 100%;
+height: 100%;
+display: none;                 /* CLAVE: por defecto oculto */
+flex-direction: column;
+align-items: center;
+text-align: center;
 }
 
 .screen.active {
-  display: flex;                 /* CLAVE: solo la activa se ve */
+display: flex;                 /* CLAVE: solo la activa se ve */
 }
 
 .screen.no-padding {
-  padding: 0;
-  overflow: hidden;
+padding: 0;
+overflow: hidden;
 }
 
 /* ===== LAYOUT REFLEXIÓN (como tu primera imagen) ===== */
 .screen.screen-reflexion {
-  justify-content: flex-start;
-  padding-top: 90px;
+justify-content: flex-start;
+padding-top: 90px;
 }
 
 /* El botón abajo SOLO en pantallas reflexión */
 .screen.screen-reflexion .btn-ver-mas {
-  margin-top: auto;
-  margin-bottom: 110px;
-  align-self: center;
+margin-top: auto;
+margin-bottom: 110px;
+align-self: center;
 }
 
 /* ===== FRAME 1 ===== */
 #frame1 {
-  background-image: url('assets/images/fondo_inicio.jpg');
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
+background-image: url('assets/images/fondo_inicio.jpg');
+background-size: 100% 100%;
+background-position: center;
+background-repeat: no-repeat;
 }
 
 /* Botón comenzar posicionado en el arte */
 #frame1 .btn-comenzar {
-  position: absolute;
-  top: 38%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 20;
+position: absolute;
+top: 38%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 20;
 }
 
 /* ===== TIPOGRAFÍAS ===== */
 .titulo-principal {
-  font-family: 'Braah One', sans-serif;
-  font-size: 2.7rem;
-  line-height: 1;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  padding: 0 20px;
-  width: 100%;
-  text-transform: uppercase;
+font-family: 'Braah One', sans-serif;
+font-size: 2.7rem;
+line-height: 1;
+margin-top: 40px;
+margin-bottom: 20px;
+padding: 0 20px;
+width: 100%;
+text-transform: uppercase;
 }
 
 .titulo-secundario {
-  font-family: 'Braah One', sans-serif;
-  font-size: 1.5rem;
-  margin: 0 0 30px 0;
-  text-transform: uppercase;
+font-family: 'Braah One', sans-serif;
+font-size: 1.5rem;
+margin: 0 0 30px 0;
+text-transform: uppercase;
 }
 
 .subtitulo {
-  margin: 0;
-  font-size: 1.3rem;
-  font-weight: 400;
+margin: 0;
+font-size: 1.3rem;
+font-weight: 400;
 }
 
 .titulo-leyenda {
   padding: 18px;
-  margin-top: 10px;
-  text-align: center;
-  font-family: 'Amarante', serif;
-  font-size: 1.8rem;
+margin-top: 10px;
+text-align: center;
+font-family: 'Amarante', serif;
+font-size: 1.8rem;
 }
 
 /* ===== TEXTOS ===== */
 .texto-historia {
-  font-family: 'Afacad', sans-serif;
-  font-size: 1.3rem;
-  line-height: 1.1;
-  text-align: center;
-  color: #4A4A8A;
-  margin: 5px auto;
-  max-width: -35%;
+font-family: 'Afacad', sans-serif;
+font-size: 1.3rem;
+line-height: 1.1;
+text-align: center;
+color: #4A4A8A;
+margin: 5px auto;
+max-width: -35%;
 }
 
 .texto-reflexion {
-  font-family: 'Amarante', serif;
-  font-size: 1.5rem;
-  line-height: 1.2;
-  margin: 0;
-  color: #2D2D5E;
+font-family: 'Amarante', serif;
+font-size: 1.5rem;
+line-height: 1.2;
+margin: 0;
+color: #2D2D5E;
 }
 
 /* Contenedores de reflexión */
 .contenedor-reflexion-vertical,
 .bloque-concientizacion {
-  max-width: 288px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  text-align: center;
+max-width: 288px;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+gap: 12px;
+text-align: center;
 }
 
 /* Para reflexiones más compactas */
 .reflexion-compacta {
-  gap: 8px;
+gap: 8px;
 }
 .reflexion-compacta p {
-  line-height: 1.3;
+line-height: 1.3;
 }
 
 /* ===== IMÁGENES ===== */
 img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+max-width: 100%;
+height: auto;
+display: block;
 }
 
 .contenedor-imagen {
-  width: 300px;
-  height: 380px;
-  border-radius: 34px;
-  overflow: hidden;
-  border: 4px solid white;
-  box-shadow: 0 15px 35px rgba(128, 125, 223, 0.3);
-  margin: 20px auto;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+width: 300px;
+height: 380px;
+border-radius: 34px;
+overflow: hidden;
+border: 4px solid white;
+box-shadow: 0 15px 35px rgba(128, 125, 223, 0.3);
+margin: 20px auto;
+cursor: pointer;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contenedor-imagen:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(128, 125, 223, 0.4);
+transform: translateY(-5px) scale(1.02);
+box-shadow: 0 20px 40px rgba(128, 125, 223, 0.4);
 }
 
 .contenedor-imagen img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+width: 100%;
+height: 100%;
+object-fit: cover;
 }
 
 /* ===== VIDEO + OVERLAY ===== */
 .video-container-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 70%;
-  overflow: hidden;
-  z-index: 1;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 70%;
+overflow: hidden;
+z-index: 1;
 }
 
 .video-background {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+width: 100%;
+height: 100%;
+object-fit: cover;
 }
 
 .overlay-texto {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  border-radius: 34px 34px 0 0;
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+border-radius: 34px 34px 0 0;
+  padding: 15px 15px;
   padding: 0px 0px;
-  box-sizing: border-box;
+box-sizing: border-box;
+  min-height: 45%;
   min-height: 35%;
-  box-shadow: 0 -10px 30px rgba(0,0,0,0.1);
-  background-color: #E0DFFE;
+box-shadow: 0 -10px 30px rgba(0,0,0,0.1);
+background-color: #E0DFFE;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  text-align: center;
-  z-index: 2;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+text-align: center;
+z-index: 2;
 }
 
 /* ===== BOTONES ===== */
 .btn-comenzar, .btn-ver-mas, .btn-continuar, .btn-scan {
-  background-color: white;
-  color: #2D2D5E;
-  border: none;
-  border-radius: 50px;
-  padding: 10px 28px;
-  font-family: 'Afacad', sans-serif;
-  font-weight: bold;
-  font-size: 1rem;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
-  opacity: 0; /* se muestra con animación al entrar */
+background-color: white;
+color: #2D2D5E;
+border: none;
+border-radius: 50px;
+padding: 10px 28px;
+font-family: 'Afacad', sans-serif;
+font-weight: bold;
+font-size: 1rem;
+cursor: pointer;
+box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+transition: transform 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
+opacity: 0; /* se muestra con animación al entrar */
 }
 
 .screen.active .btn-comenzar,
 .screen.active .btn-ver-mas,
 .screen.active .btn-continuar,
 .screen.active .btn-scan {
-  animation: aparecerBoton 0.35s ease-out forwards;
-  animation-delay: 0.15s;
+animation: aparecerBoton 0.35s ease-out forwards;
+animation-delay: 0.15s;
 }
 
 @keyframes aparecerBoton {
-  to { opacity: 1; }
+to { opacity: 1; }
 }
 
 /* Press */
@@ -262,360 +264,374 @@ img {
 .btn-ver-mas:active,
 .btn-continuar:active,
 .btn-scan:active {
-  transform: scale(0.95);
-  background-color: #f9f9f9;
+transform: scale(0.95);
+background-color: #f9f9f9;
 }
 
 /* Caso especial: botón comenzar (mantiene translate) */
 #frame1 .btn-comenzar:active {
-  transform: translate(-50%, -50%) scale(0.95);
+transform: translate(-50%, -50%) scale(0.95);
 }
 
 /* Botón Scan morado */
 .btn-scan {
-  background-color: #E0DFFE;
+background-color: #E0DFFE;
 }
 .btn-scan:hover {
-  background-color: #d1d0fc;
-  transform: scale(1.05);
+background-color: #d1d0fc;
+transform: scale(1.05);
 }
 .btn-scan:active {
-  background-color: #d1d0fc;
-  transform: scale(0.95);
+background-color: #d1d0fc;
+transform: scale(0.95);
 }
 
 /* ===== GALERÍA ===== */
 .pantalla-blanca {
-  background-color: white;
-  align-items: stretch;      /* para que la zona morada ocupe ancho completo */
-  justify-content: flex-start;
+background-color: white;
+align-items: stretch;      /* para que la zona morada ocupe ancho completo */
+justify-content: flex-start;
 }
 
 .header-galeria {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px 20px 20px 20px;
-  background-color: white;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 40px 20px 20px 20px;
+background-color: white;
 }
 
 .titulo-galeria {
-  font-family: 'Braah One', sans-serif;
-  color: #2D2D5E;
-  font-size: 1.4rem;
-  margin: 0 0 10px 0;
-  text-transform: uppercase;
+font-family: 'Braah One', sans-serif;
+color: #2D2D5E;
+font-size: 1.4rem;
+margin: 0 0 10px 0;
+text-transform: uppercase;
 }
 
 .contenedor-scan {
-  margin-top: 15px;
-  display: flex;
-  justify-content: center;
+margin-top: 15px;
+display: flex;
+justify-content: center;
 }
 
 /* QR Reader (único) */
 #reader {
-  width: 300px;
-  display: none;
-  margin: 10px auto;
-  border: 4px solid #E0DFFE;
-  border-radius: 20px;
-  overflow: hidden;
-  background: #000;
+width: 300px;
+display: none;
+margin: 10px auto;
+border: 4px solid #E0DFFE;
+border-radius: 20px;
+overflow: hidden;
+background: #000;
 }
 
 #reader video {
-  border-radius: 20px;
-  object-fit: cover;
+border-radius: 20px;
+object-fit: cover;
 }
 
 /* Zona posters */
 .zona-posters-morada {
-  background-color: #E0DFFE;
-  border-radius: 34px 34px 0 0;
-  width: 100%;
-  padding: 40px 20px 40px 20px;
-  box-sizing: border-box;
-  margin-top: 40px;
-  flex-grow: 1;
-  overflow-y: auto;
-  position: relative;
-  scrollbar-width: none;
+background-color: #E0DFFE;
+border-radius: 34px 34px 0 0;
+width: 100%;
+padding: 40px 20px 40px 20px;
+box-sizing: border-box;
+margin-top: 40px;
+flex-grow: 1;
+overflow-y: auto;
+position: relative;
+scrollbar-width: none;
 }
 .zona-posters-morada::-webkit-scrollbar { display: none; }
 
 .vineta-posters {
-  position: absolute;
-  top: -24px;
-  left: 20px;
-  background-color: #E0DFFE;
-  padding: 8px 25px;
-  border-radius: 15px 15px 0 0;
+position: absolute;
+top: -24px;
+left: 20px;
+background-color: #E0DFFE;
+padding: 8px 25px;
+border-radius: 15px 15px 0 0;
 }
 .vineta-posters span {
-  font-family: 'Braah One', sans-serif;
-  color: #2D2D5E;
-  font-size: 0.9rem;
+font-family: 'Braah One', sans-serif;
+color: #2D2D5E;
+font-size: 0.9rem;
 }
 
 .grid-posters {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 15px;
 }
 
 .card-poster {
-  background-color: white;
-  border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  padding: 12px 12px 0 12px;
-  overflow: hidden;
+background-color: white;
+border-radius: 20px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+cursor: pointer;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+padding: 12px 12px 0 12px;
+overflow: hidden;
 }
 
 .card-poster:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+transform: translateY(-8px);
+box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .card-poster img {
-  width: 100%;
-  border-radius: 20px 20px 0 0;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+width: 100%;
+border-radius: 20px 20px 0 0;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .contenedor-nombre-blanco {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 12px 5px;
-  border-radius: 0 0 20px 20px;
-  text-align: center;
+width: 100%;
+box-sizing: border-box;
+padding: 12px 5px;
+border-radius: 0 0 20px 20px;
+text-align: center;
 }
 
 .contenedor-nombre-blanco span {
-  font-family: 'Afacad', sans-serif;
-  font-weight: 400;
-  font-size: 1.4rem;
-  color: #2D2D5E;
-  line-height: 1.1;
-  display: inline-block;
+font-family: 'Afacad', sans-serif;
+font-weight: 400;
+font-size: 1.4rem;
+color: #2D2D5E;
+line-height: 1.1;
+display: inline-block;
 }
 
 #frame7 .contenedor-scan{
-  margin-top: 20px !important;
+margin-top: 20px !important;
 }
 #frame7{
-  justify-content: flex-start !important;
+justify-content: flex-start !important;
 }
 
 #frame7 .header-galeria{
-  flex: 0 0 auto !important;       /* header NO crece */
-  padding-top: 85px !important;
-  padding-bottom: 10px !important; /* menos espacio abajo */
+flex: 0 0 auto !important;       /* header NO crece */
+padding-top: 85px !important;
+padding-bottom: 10px !important; /* menos espacio abajo */
 }
 
 #frame7 .zona-posters-morada{
-  flex: 1 1 auto !important;       /* ocupa el espacio restante */
-  margin-top: 20px !important;     /* sube el recuadro */
-  padding-top: 20px !important;
+flex: 1 1 auto !important;       /* ocupa el espacio restante */
+margin-top: 20px !important;     /* sube el recuadro */
+padding-top: 20px !important;
 }
 
 /* ===== PANTALLAS POSTER: más centradas y no pegadas arriba ===== */
 .pantalla-poster{
-  justify-content: center !important;  /* centra vertical */
-  padding-top: 70px !important;        /* baja todo (espacio notch) */
-  padding-bottom: 40px !important;
-  box-sizing: border-box;
+justify-content: center !important;  /* centra vertical */
+padding-top: 70px !important;        /* baja todo (espacio notch) */
+padding-bottom: 40px !important;
+box-sizing: border-box;
 }
 
 /* Quita los margin-top fuertes que empujan el layout */
 .pantalla-poster .titulo-principal,
 .pantalla-poster .titulo-secundario{
-  margin-top: 0 !important;
+margin-top: 0 !important;
 }
 
 /* Ajuste fino para que no haya tanto espacio entre elementos */
 .pantalla-poster .subtitulo{
-  margin-top: 8px !important;
-  margin-bottom: 8px !important;
+margin-top: 8px !important;
+margin-bottom: 8px !important;
 }
 
 .pantalla-poster .contenedor-imagen{
-  margin: 18px auto !important;
+margin: 18px auto !important;
 }
 
 .pantalla-poster .titulo-leyenda{
-  margin-top: 14px !important;
+margin-top: 14px !important;
 }
 
 .overlay-texto .titulo-leyenda{
-  margin-top: 0 !important;
+margin-top: 0 !important;
+  margin-bottom: 10px !important; /* antes se veía muy separado */
   margin-bottom: 15px !important; 
 }
 
 /* Pega más el texto al título */
 .overlay-texto .texto-historia{
+  margin-top: 15px !important;
   margin-top: 0px !important;
-  margin-bottom: 16px !important;
-  line-height: 1.15 !important;   /* un poco más compacto */
+margin-bottom: 16px !important;
+line-height: 1.15 !important;   /* un poco más compacto */
 }
 
 /* Dale espacio al botón (CONTINUAR) para que no quede pegado */
 .overlay-texto .btn-continuar{
+  margin-top: 13px !important;
   margin-top: 15px !important;
 }
 
 /* Si tu botón está dentro de .controles-inferiores, asegúralo centrado y con aire abajo */
 .controles-inferiores{
-  margin-top: 6px !important;
-  padding-bottom: 10px !important;
-  display: flex;
-  justify-content: center;
+margin-top: 6px !important;
+padding-bottom: 10px !important;
+display: flex;
+justify-content: center;
 }
 
 
 /* ===== PANTALLAS DE REFLEXIÓN (título arriba, texto centrado, botón más arriba) ===== */
 .pantalla-reflexion{
-  justify-content: flex-start !important;
-  padding-top: 80px !important;     /* deja el título arriba pero no pegado al notch */
-  padding-bottom: 70px !important;  /* controla el “aire” abajo */
-  box-sizing: border-box;
+justify-content: flex-start !important;
+padding-top: 80px !important;     /* deja el título arriba pero no pegado al notch */
+padding-bottom: 70px !important;  /* controla el “aire” abajo */
+box-sizing: border-box;
 }
 
 /* Título: un poquito arriba */
 .pantalla-reflexion .titulo-secundario{
-  margin-top: 25px !important;
-  margin-bottom: 45px !important;
+margin-top: 25px !important;
+margin-bottom: 45px !important;
 }
 
 /* Párrafos: centrados en el medio */
 .pantalla-reflexion .contenedor-reflexion-vertical,
 .pantalla-reflexion .bloque-concientizacion{
-  margin-top: 0 !important;
-  margin-bottom: auto !important;   /* esto los clava al centro */
+margin-top: 0 !important;
+margin-bottom: auto !important;   /* esto los clava al centro */
 }
 
 /* Botón: un poco más arriba */
 .pantalla-reflexion .btn-ver-mas{
-  margin-top: 35px !important;
-  margin-bottom: 50px !important;   /* antes lo empujabas a 110px */
+margin-top: 35px !important;
+margin-bottom: 50px !important;   /* antes lo empujabas a 110px */
 }
 
 
 .contenedor-movil{
-  width: min(402px, 94vw) !important;
-  height: min(874px, 94vh) !important;
+width: min(402px, 94vw) !important;
+height: min(874px, 94vh) !important;
 }
 
 /* Ajuste notch proporcional */
 .contenedor-movil::before{
-  top: 12px !important;
-  width: 30% !important;
-  max-width: 120px !important;
-  height: 32px !important;
+top: 12px !important;
+width: 30% !important;
+max-width: 120px !important;
+height: 32px !important;
 }
 
 /* ===== MOBILE (520px) - limpio y sin conflictos ===== */
 @media (max-width: 520px) {
 
-  /* Body en móvil: sin “maqueta”, ocupa pantalla completa */
-  body{
-    margin: 0;
-    width: 100vw;
-    height: 100svh;
-    display: block;
-    overflow: hidden;
-    background-color: #E0DFFE;
-  }
+/* Body en móvil: sin “maqueta”, ocupa pantalla completa */
+body{
+margin: 0;
+width: 100vw;
+height: 100svh;
+display: block;
+overflow: hidden;
+background-color: #E0DFFE;
+}
 
-  /* Contenedor ocupa todo (sin borde/notch fake) */
-  .contenedor-movil{
-    width: 100vw !important;
-    height: 100svh !important;
-    border: none !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-  }
+/* Contenedor ocupa todo (sin borde/notch fake) */
+.contenedor-movil{
+width: 100vw !important;
+height: 100svh !important;
+border: none !important;
+border-radius: 0 !important;
+box-shadow: none !important;
+}
 
-  .contenedor-movil::before{
-    display: none !important;
-  }
+.contenedor-movil::before{
+display: none !important;
+}
 
-  /* Cada pantalla ocupa todo el alto */
-  .screen{
-    height: 100svh !important;
-  }
+/* Cada pantalla ocupa todo el alto */
+.screen{
+height: 100svh !important;
+}
 
-  /* ===== REFLEXIÓN (sin scroll, centrado y compacto) ===== */
-  .pantalla-reflexion{
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    text-align: center !important;
-    padding-top: 70px !important;
-    padding-bottom: 55px !important;
-    box-sizing: border-box;
-  }
+/* ===== REFLEXIÓN (sin scroll, centrado y compacto) ===== */
+.pantalla-reflexion{
+display: flex !important;
+flex-direction: column !important;
+justify-content: space-between !important;
+align-items: center !important;
+text-align: center !important;
+padding-top: 70px !important;
+padding-bottom: 55px !important;
+box-sizing: border-box;
+}
 
-  .pantalla-reflexion .titulo-secundario{
-    margin: 0 0 18px 0 !important;
-  }
+.pantalla-reflexion .titulo-secundario{
+margin: 0 0 18px 0 !important;
+}
 
-  .pantalla-reflexion .contenedor-reflexion-vertical,
-  .pantalla-reflexion .bloque-concientizacion{
-    margin: 0 auto !important;
-    padding: 0 18px !important;
-    text-align: center !important;
-  }
+.pantalla-reflexion .contenedor-reflexion-vertical,
+.pantalla-reflexion .bloque-concientizacion{
+margin: 0 auto !important;
+padding: 0 18px !important;
+text-align: center !important;
+}
 
-  .pantalla-reflexion .texto-reflexion{
-    font-size: 1.45rem !important;   /* 👈 baja letra reflexión */
-    line-height: 1.2 !important;
-  }
+.pantalla-reflexion .texto-reflexion{
+font-size: 1.45rem !important;   /* 👈 baja letra reflexión */
+line-height: 1.2 !important;
+}
 
-  .pantalla-reflexion .btn-ver-mas{
-    margin: 18px auto 0 auto !important;
-  }
+.pantalla-reflexion .btn-ver-mas{
+margin: 18px auto 0 auto !important;
+}
 
+  /* ===== HISTORIA (overlay sobre video) ===== */
   /* HISTORIA */
-  .texto-historia{
-    max-width: 92% !important;
+.texto-historia{
+max-width: 92% !important;
+    font-size: 1.2rem !important;      /* 👈 baja letra historia */
     font-size: 1.2rem !important;      
-    line-height: 1.15 !important;
+line-height: 1.15 !important;
+    margin: 10px auto 12px auto !important;
     margin: 10px  12px  !important;
-    text-align: center !important;
-  }
+text-align: center !important;
+}
 
-  .overlay-texto .titulo-leyenda{
+.overlay-texto .titulo-leyenda{
+    font-size: 1.35rem !important;   /* 👈 baja título dentro overlay */
     font-size: 1.35rem !important;   
-    margin: 0 0 10px 0 !important;
-  }
+margin: 0 0 10px 0 !important;
+}
 
-  .overlay-texto .btn-continuar{
+.overlay-texto .btn-continuar{
+    padding: 9px 22px !important;
     padding: 5px 22px !important;
-    font-size: 0.95rem !important;
-    margin-top: 8px !important;
-  }
+font-size: 0.95rem !important;
+margin-top: 8px !important;
+}
 }
 
 .overlay-compacto {
+  min-height: auto !important; /* Elimina la altura mínima del 45% */
+  height: auto !important;     /* Deja que el contenido defina la altura */
+  padding-top: 20px !important;    /* Menos espacio arriba */
+  padding-bottom: 20px !important; /* Menos espacio abajo */
   min-height: auto !important; 
   height: auto !important;     
   padding-top: 20px !important;   
   padding-bottom: 20px !important; 
-  bottom: 0;
+bottom: 0;
 }
 
+/* Ajuste fino para el título dentro del recuadro compacto */
 
 .overlay-compacto .titulo-leyenda {
-  margin-bottom: 10px !important;
+margin-bottom: 10px !important;
 }
 
+/* ===== CLAVE: SOLO la pantalla .active se muestra ===== */
 .screen { 
-  display: none !important; 
+display: none !important; 
 }
 .screen.active { 
-  display: flex !important; 
+display: flex !important; 
 }
