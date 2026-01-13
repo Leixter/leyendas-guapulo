@@ -600,12 +600,12 @@ img {
 
   /* HISTORIA */
   .texto-historia {
-    font-size: 1.15rem !important;
-    line-height: 1.1 !important; /* Interlineado compacto para que quepa */
-    margin: 5px 0 !important;
-    display: block !important; 
-    text-align: center !important;
-    max-width: 100% !important;
+    min-height: auto !important; /* <--- ELIMINAMOS el 32% o 50% */
+    height: auto !important; 
+    padding: 15px 20px 20px 20px !important; /* Menos espacio interno */
+    border-radius: 40px 40px 0 0 !important;
+    justify-content: flex-start !important;
+    bottom: 0 !important
   }
 
   .overlay-texto {
