@@ -596,10 +596,12 @@ img {
 
   /* HISTORIA */
   .texto-historia{
-    max-width: 95% !important;
-    font-size: 1.15rem !important; 
-    line-height: 1.2 !important;
-    margin: 10px auto !important;
+    min-height: 45% !important; /* <--- Esto hace que el recuadro NO sea chiquito */
+    padding: 25px 20px !important; /* <--- Añade espacio interno */
+    border-radius: 40px 40px 0 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
   }
 
   .overlay-texto{
