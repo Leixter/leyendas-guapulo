@@ -520,7 +520,7 @@ img {
 /* ===== MOBILE (520px) - limpio y sin conflictos ===== */
 @media (max-width: 520px) {
   .contenedor-imagen {
-    width: 300px;
+    width: 250px;
     height: 350px;
     border-radius: 34px;
     overflow: hidden;
