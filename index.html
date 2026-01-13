@@ -603,6 +603,15 @@
       destinoPendiente = leyenda ? rutas[leyenda] : null;
       cambiarPantalla("frame1");
     });
+    // Detecta cuando el usuario sale de la pestaña o bloquea el cel
+  document.addEventListener("visibilitychange", function() {
+    if (document.hidden) {
+      // Si la página se oculta, pausamos todos los audios
+      const todosLosAudios = document.querySelectorAll('audio');
+      todosLosAudios.forEach(audio => audio.pause());
+      console.log("Audio pausado por salida del navegador");
+    }
+});
   </script>
 
 
